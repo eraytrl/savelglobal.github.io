@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Savelglobal.com</title>
+    <link rel="icon" type="image/png" href="ğ1.jpeg.jpg">
+ 
+    <style>
+        /* Genel stil tanımlamaları */
+body {
+    margin: 0; /* Kenar boşluğu */
+    padding: 0; /* İç dolgu */
+    font-family: Arial, sans-serif; /* Yazı tipi */
+    background-image: url('boga.jpg'); /* Arka plan resmi */
+    background-repeat: round; /* Arka plan resminin yinelenmesi */
+    color: #fff; /* Metin rengi */
+    display: flex; /* Flex konteynerı */
+    padding: 9%; /* Kenar boşluğu */
+    flex-direction: column; /* Dikey yönlendirme */
+    align-items: center; /* Öğeleri dikey olarak hizalar */
+    justify-content: 100vh; /* Öğeleri dikey olarak hizalar */
+}
+
+/* Menü stil tanımlamaları */
+.menu {
+    display: flex; /* Flex konteynerı */
+    justify-content: space-between; /* Öğeleri eşit olarak dağıtır */
+    background-color: #00000000; /* Arkaplan rengi (şeffaf) */
+    padding: 10px; /* İç dolgu */
+    margin-bottom: 10px; /* Alt boşluk */
+}
+
+/* Menü sütunu stil tanımlamaları */
+.menu-column {
+    flex: 1; /* Esneklik */
+    text-align: center; /* Metin hizalama */
+}
+
+/* Menü içindeki liste stil tanımlamaları */
+.menu ul {
+    list-style-type: none; /* Liste işaretleri */
+    padding: 20px; /* İç dolgu */
+}
+
+/* Menü içindeki liste öğesi stil tanımlamaları */
+.menu ul li {
+    padding: 3px 0; /* İç dolgu */
+    min-width: 500px; /* Minimum genişlik */
+}
+
+/* İçerik stil tanımlamaları */
+.content {
+    padding: 20px; /* İç dolgu */
+    background-color: #444; /* Arka plan rengi */
+}
+        /* .button sınıfı stil tanımlamaları */
+.button {
+    -moz-box-shadow: inset 0 0 0 1px #000000; /* Firefox için gölge efekti */
+    -webkit-box-shadow: inset 0 0 0 1px #000000; /* Webkit tabanlı tarayıcılar için gölge efekti */
+    -moz-border-radius: 3px; /* Firefox için köşe yuvarlama */
+    -webkit-border-radius: 3px; /* Webkit tabanlı tarayıcılar için köşe yuvarlama */
+    background: #000000; /* Arka plan rengi */
+    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#f1eeee), to(#e2e2e2)); /* Webkit tabanlı tarayıcılar için gradient arka plan */
+    background: -moz-linear-gradient(#eee, #e2e2e2); /* Mozilla tabanlı tarayıcılar için gradient arka plan */
+    background: linear-gradient(#000000, #e2e2e2); /* Standart linear gradient arka plan */
+    border: solid 5px #000000; /* Kenarlık rengi ve kalınlığı */
+    border-bottom: solid 3px #b2b1b1; /* Alt kenarlık rengi ve kalınlığı */
+    border-radius: 10px; /* Köşe yuvarlama */
+    box-shadow: inset 0 0 0 3px #000000; /* Gölge efekti */
+    color: #ffffff; /* Metin rengi */
+    font: bold 12px Arial, Helvetica, sans-serif; /* Yazı tipi özellikleri */
+    margin: 0 25px 25px 0; /* Kenar boşlukları */
+    padding: 10px 20px; /* İç dolgu */
+    position: relative; /* Pozisyon */
+    text-align: center; /* Metin hizalama */
+    text-decoration: none; /* Metin dekorasyonu (alt çizgi) */
+    text-shadow: 0 1px 0 #fafafa; /* Metin gölge efekti */
+    transition: all 1s; /* Tüm geçiş efektleri */
+}
+
+/* .button üzerine gelindiğinde */
+.button:hover {
+    background-color: #000000; /* Arka plan rengi */
+    color: #000000; /* Metin rengi */
+}
+
+/* .button aktif olduğunda (tıklama anında) */
+.button:active {
+    transform: translate(-100px); /* X ekseni boyunca kaydırma */
+}
+
+/* Ziyaret edilen .button bağlantılarının rengi */
+a.button:visited {
+    color: rgb(255, 255, 255); /* Ziyaret edilen bağlantıların metin rengi */
+}
+
+/* .button üzerine gelindiğinde */
+a.button:hover {
+    background: #e4e4e4; /* Arka plan rengi */
+    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#e4e4e4), to(#ededed)); /* Webkit tabanlı tarayıcılar için gradient arka plan */
+    background: -moz-linear-gradient(#e4e4e4, #ededed); /* Mozilla tabanlı tarayıcılar için gradient arka plan */
+    background: linear-gradient(#e4e4e4, #ededed); /* Standart linear gradient arka plan */
+    border: solid 1px #c2c2c2; /* Kenarlık rengi ve kalınlığı */
+    border-bottom: solid 3px #fefefe; /* Alt kenarlık rengi ve kalınlığı */
+    box-shadow: inset 0 0 0 1px #efefef; /* Gölge efekti */
+    cursor: pointer; /* İmleç tipi */
+    transform: translate(-500px); /* X ekseni boyunca kaydırma */
+}
+
+/* .button aktif olduğunda (tıklama anında) */
+a.button:active {
+    background: #000000; /* Arka plan rengi */
+    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#dfdfdf), to(#e3e3e3)); /* Webkit tabanlı tarayıcılar için gradient arka plan */
+    background: -moz-linear-gradient(#dfdfdf, #e3e3e3); /* Mozilla tabanlı tarayıcılar için gradient arka plan */
+    background: linear-gradient(#dfdfdf, #e3e3e3); /* Standart linear gradient arka plan */
+    border: solid 1px #959595; /* Kenarlık rengi ve kalınlığı */
+    box-shadow: inset 0 10px 15px 0 #c4c4c4; /* Gölge efekti */
+    top: 2px; /* Üst konum */
+}
+
+/* .logo sınıfı stil tanımlamaları */
+.logo {
+    width: 500px; /* Genişlik */
+    height: 150px; /* Yükseklik */
+    background-color: rgba(260, 260, 260, 0); /* Arkaplan rengi (şeffaf) */
+    background-image: url(savel.png); /* Arka plan resmi */
+    margin-top: 20px; /* Üst boşluk */
+    margin-left: 125px; /* Sol boşluk */
+    background-repeat: no-repeat; /* Arka plan resminin tekrar etmemesi */
+}
+
+/* .fade-out sınıfı stil tanımlamaları */
+.fade-out {
+    opacity: 0; /* Görünmezlik */
+    transition: opacity 0.5s ease-in-out; /* Geçiş efekti: opaklık */
+}
+
+/* .fade-out sınıfının gizli durumu */
+.fade-out.hidden {
+    display: none; /* Gizli olması */
+}
+    </style>
+</head>
+<body>
+    <div class="logo"></div>
+        <div class="menu">
+            <div class="menu-column">
+                <ul>
+                    <li><a href="anasayfa2.html" class="button " >&numsp;&numsp;Homepage&numsp;&numsp;</a></li>    
+                    <br><br><br>
+                    <li><a href="hakkımızda2.html" class="button" >&numsp;&numsp;&numsp;About Us&numsp;&numsp;&numsp;</a></li>
+                    <br><br><br>
+                    <li><a href="mobilco2.html" class="button" >&numsp;Mobile Station&numsp;</a></li>
+                </ul>
+            </div>
+            <div class="menu-column">
+                <ul>
+                    <li><a href=""class="button">&numsp;&numsp;&numsp;Fuel Solutions&numsp;&numsp;&numsp;</a></li>
+                    <br><br><br>
+                    <li><a href=""class="button">&numsp;&numsp;&numsp;&numsp;PG Solutions&numsp;&numsp;&numsp;&numsp;</a></li>
+                    <br><br><br>
+                    <li><a href=""class="button">&numsp;Automation Solutions&numsp;</a></li>
+                    <br><br><br><br>
+                    <li><a href="savel.html" > <img src="Tr Bayrak.png" width="30" height="30"></a></li>
+                </ul>
+            </div>
+            <div class="menu-column">
+                <ul>
+                    <li><a href="ürünler2.html"class="button">&numsp;&numsp;Our Products&numsp;&numsp;</a></li>
+                    <br><br><br>
+                    <li><a href="referanslar2.html"class="button">&numsp;Our References&numsp;</a></li>
+                    <br><br><br>
+                    <li><a href="iletisim2.html"class="button">&numsp;&numsp;&numsp;&numsp;Contact&numsp;&numsp;&numsp;&numsp;</a></li>  
+                </ul>
+            </div>
+        </div>
+
+        
+
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+      document.body.classList.remove('fade-out');
+    });
+    
+    document.querySelectorAll('a.button').forEach(function(link) {
+      link.addEventListener('click', function(event) {
+        event.preventDefault();
+        document.body.classList.add('fade-out'); 
+        setTimeout(function() {
+          window.location.href = link.href; 
+        }, 500); 
+      });
+    });
+      </script>
+</body>
+</html>

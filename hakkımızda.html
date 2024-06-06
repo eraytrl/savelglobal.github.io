@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>    
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hakkımızda</title>
+<link rel="icon" type="image/png" href="ğ1.jpeg">
+<style>
+/* Genel stil tanımlamaları */
+body {
+    background-color: #000; /* Arka plan rengi */
+    color: #fff; /* Metin rengi */
+    font-family: Arial, sans-serif; /* Yazı tipi */
+    padding: 20px; /* İç dolgu */
+    margin: 0; /* Kenar boşluğu */
+    position: relative; /* Pozisyon */
+}
+
+/* Ana konteyner stil tanımlamaları */
+.container {
+    max-width: 800px; /* Maksimum genişlik */
+    margin: 0 auto; /* Kenar boşluğu ile merkezleme */
+}
+
+/* Başlık stil tanımlamaları */
+h1 {
+    text-align: center; /* Metin hizalama */
+}
+
+/* Paragraf stil tanımlamaları */
+p {
+    text-align: justify; /* Metin hizalama */
+}
+
+/* Logo alanı stil tanımlamaları */
+.logo-area {
+    position: absolute; /* Pozisyon */
+    top: 95%; /* Üst konum */
+    right: 42%; /* Sağ konum */
+    width: 200px; /* Genişlik */
+    height: 70px; /* Yükseklik */
+}
+
+/* Sağdaki görüntü stil tanımlamaları */
+.right-image {
+    position: absolute; /* Pozisyon */
+    top: 50%; /* Üst konum */
+    right: 20px; /* Sağ konum */
+    transform: translateY(-40%); /* Dikey konumlandırma */
+    width: 250px; /* Genişlik */
+    height: 400px; /* Yükseklik */
+}
+
+/* Soldaki görüntü stil tanımlamaları */
+.left-image {
+    position: absolute; /* Pozisyon */
+    top: 50%; /* Üst konum */
+    left: 20px; /* Sol konum */
+    transform: translateY(-40%); /* Dikey konumlandırma */
+    width: 250px; /* Genişlik */
+    height: 400px; /* Yükseklik */
+}
+
+/* Görünmezlik efekti stil tanımlamaları */
+.fade-out {
+    opacity: 0; /* Opaklık */
+    transition: opacity 0.5s ease-in-out; /* Geçiş efekti */
+}
+
+/* Gizli durum stil tanımlamaları */
+.fade-out.hidden {
+    display: none; /* Görünmezlik */
+}
+
+</style>
+</head>
+<body>
+<div class="container">
+    <h1>Hakkımızda</h1>
+    <br>
+    <p>Savel olarak kendimizi Enerji ekipmanları üretici kulvarında görmekteyiz. Başlangıç olarak Akaryakıt pompa elektroniği ve Akaryakıt otomasyon hizmetleri alanlarında faaliyete başlayan firmamız zamanla büyüme ve gelişme süreçleriyle bugünlere gelmiştir. Halen ilk günün heyecanıyla emin ve kararlı adımlarla sektöre heyecan getirmeye devam etmekteyiz. Bugün Savel Akaryakıt pompalarından mobil tank çözümlerine varana kadar bütün ekipmanları kendi bünyesinde üretmektedir. Özellikle mobil istasyon çözümleriyle sektöre yenilik getirmenin yanında alternatif çözümlerinde mevcut olduğunu ilgili herkese göstermiş olduk.</p>
+   <hr>
+   <p>Savel Mobil Enerji İstasyonları konusunda sürekli olarak kendine yeni hedefler koymaktadır. Basit tank çözümleriyle başlayan yolumuz bugün bir akaryakıt istasyonunda olması gereken her şeyi ihtiva eden 40ft’lik konteynırlarla devam etmektedir. A’dan Z’ye her şeyini kendimizin ürettiği mobil çözümlerde ilave olarak son teknolojik ekipmanlarla müşterinin akaryakıt istasyonundan beklediği her şeyi konsept olarak sunmaktayız. Klima, Jeneratör, Otomasyon kabini, Pompacı odası gibi basit tank çözümlerinde olması beklenmeyen ekipman ve ilaveler bizim çözümlerimizde vazgeçilemez ana unsurlardır.</p>
+   <hr>
+   <p>Müşteri memnuniyeti bizim için diğer marka değeri taşıyan firmalarda olduğu gibi kalite kadar önemli bir unsurdur. Sadece işin bugünü için değil yarını içinde kullanıcı hoşnutluğu vazgeçilmez bir Savel prensibidir. Özellikle yurtdışı müşterilerimiz sunduğumuz yüksek kalite ve daha makul fiyatlar nedeniyle bizimle süreklilik içerisinde birliktelik göstermektedirler. Biz müşterilerimize özellikle bazı firmalara karşı alternatifin ötesinde bir şövalyelik sergilemekteyiz. Bu müşterilerimize kalitenin yanında bizim ürünlerle daha fazla kar etme şansı tanımaktadır. İşte müşterilerimizin çoğu bu noktayı yakalayıp özümsediği için bize karşı memnuniyetleri kat ve kat artmaktadır. Bunun gerçek hayatta sayısız örneği olmasaydı sıfır sermaye ile başladığımız bu yolda bugün bu noktalarda olamazdık.</p>
+</div>
+<div class="logo-area">
+    <a href="Savel.html" class="button"><img src="savel.png" alt="Logo" style="width: 200px; height: 70px;"></a>
+</div>
+<img class="right-image" src="i1.jpeg.jpg">
+<img class="left-image" src="ü1.jpeg.jpg">
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+  document.body.classList.remove('fade-out');
+});
+
+document.querySelectorAll('a.button').forEach(function(link) {
+  link.addEventListener('click', function(event) {
+    event.preventDefault();
+    document.body.classList.add('fade-out'); 
+    setTimeout(function() {
+      window.location.href = link.href; 
+    }, 500); 
+  });
+});
+  </script>
+</body>
+</html>

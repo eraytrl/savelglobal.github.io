@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Station</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
+    <link rel="icon" type="image/png" href="ğ1.jpeg.jpg">
+    <style>
+       body {
+    background-color: black; /* Arka plan rengi */
+    color: white; /* Metin rengi */
+    font-family: Arial, sans-serif; /* Yazı tipi */
+    padding: 20px; /* Kenar boşlukları */
+    margin: 0; /* Kenar boşlukları */
+    height: 115vh; /* Yükseklik */
+    display: flex; /* Flex konteynerı */
+    justify-content: center; /* Öğeleri yatayda hizalama */
+    align-items: center; /* Öğeleri dikeyde hizalama */
+    position: relative; /* Pozisyon */
+}
+
+/* Ana konteyner stil tanımlamaları */
+.container {
+    max-width: 800px; /* Maksimum genişlik */
+    display: flex; /* Flex konteynerı */
+    flex-wrap: wrap; /* Öğeleri sarma */
+    justify-content: center; /* Öğeleri yatayda hizalama */
+}
+
+/* Ürün kartı stil tanımlamaları */
+.product {
+    flex: 0 0 calc(33.3333% - 20px); /* Öğenin genişliği */
+    margin: 10px; /* Kenar boşluğu */
+    padding: 50px; /* İç dolgu */
+    background-color: #333; /* Arka plan rengi */
+    border-radius: 5px; /* Kenar yuvarlama */
+    position: relative; /* Pozisyon */
+    overflow: hidden; /* Taşan içeriği gizleme */
+    text-align: center; /* Metin hizalama */
+}
+
+/* Ürün resmi stil tanımlamaları */
+.product img {
+    display: block; /* Blok öğe */
+    max-width: 100%; /* Maksimum genişlik */
+    height: auto; /* Otomatik yükseklik */
+    margin: 0 auto; /* Kenar boşluğu */
+    transition: transform 0.5s; /* Geçiş efekti */
+}
+
+/* Ürün resmine üzerine gelindiğinde stil tanımlamaları */
+.product:hover img {
+    transform: scale(1.1); /* Büyütme efekti */
+}
+
+/* Ürün içeriği stil tanımlamaları */
+.product-content {
+    position: absolute; /* Pozisyon */
+    bottom: 0; /* Alt konum */
+    left: 0; /* Sol konum */
+    width: 100%; /* Genişlik */
+    padding: 10px; /* İç dolgu */
+    background-color: rgba(0, 0, 0, 0.7); /* Arka plan rengi */
+    transition: opacity 0.5s; /* Geçiş efekti */
+    opacity: 0; /* Opaklık */
+    text-align: center; /* Metin hizalama */
+}
+
+/* Ürün içeriğine üzerine gelindiğinde stil tanımlamaları */
+.product:hover .product-content {
+    opacity: 1; /* Opaklık */
+}
+
+/* Logo stil tanımlamaları */
+.logo {
+    position: fixed; /* Sabit pozisyon */
+    top: 50%; /* Üst konum */
+    right: 0; /* Sağ konum */
+    transform: translateY(250%) rotate(90deg); /* Dönme ve konumlandırma */
+    transform-origin: top right; /* Dönme kaynağı */
+    display: flex; /* Flex konteynerı */
+    align-items: center; /* Öğeleri dikeyde hizalama */
+}
+
+/* Görünmezlik efekti stil tanımlamaları */
+.fade-out {
+    opacity: 0; /* Opaklık */
+    transition: opacity 0.5s ease-in-out; /* Geçiş efekti */
+}
+
+/* Gizli durum stil tanımlamaları */
+.fade-out.hidden {
+    display: none; /* Görünmezlik */
+}
+
+       
+    </style>
+</head>
+<body>
+    <div class="logo">
+        <a href="anasayfa2.html" class="button"><img src="savel.png"></a>
+    </div>
+    <div class="container">
+        <div class="product">
+            <a data-fancybox="gallery" href="r1.jpeg.jpg"><img src="r1.jpeg.jpg" style="height: 200px; width: 200px;" alt="Product 1 Image"></a>
+            <div class="product-content">MobileContainer 40ft</div>
+        </div>
+        <div class="product">
+            <a data-fancybox="gallery" href="r2.jpeg.jpg"><img src="r2.jpeg.jpg" style="height: 200px; width: 200px;" alt="Product 2 Image"></a>
+            <div class="product-content">MobileBasic Indoor</div>
+        </div>
+        <div class="product">
+           <a data-fancybox="gallery" href="r3.jpeg.jpg"><img src="r3.jpeg.jpg" style="height: 200px; width: 200px;" alt="Product 3 Image"></a>
+            <div class="product-content">MobileBowser</div>
+        </div>
+        <div class="product">
+            <a data-fancybox="gallery" href="r4.jpeg.jpg"><img src="r4.jpeg.jpg" style="height: 200px; width: 200px;" alt="Product 4 Image"></a>
+            <div class="product-content">MobileBasic Outdoor</div>
+        </div>
+        <div class="product">
+            <a data-fancybox="gallery" href="r5.jpeg.jpg"><img src="r5.jpeg.jpg" style="height: 200px; width: 200px;" alt="Product 5 Image"></a>
+            <div class="product-content">MobileContainer 20ft</div>
+        </div>
+        <div class="product">
+            <a data-fancybox="gallery" href="r6.jpeg.jpg"><img src="r6.jpeg.jpg" style="height: 200px; width: 200px;" alt="Product 6 Image"></a>
+            <div class="product-content">MobileContainer 10ft</div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+      document.body.classList.remove('fade-out');
+    });
+    
+    document.querySelectorAll('a.button').forEach(function(link) {
+      link.addEventListener('click', function(event) {
+        event.preventDefault(); 
+        document.body.classList.add('fade-out'); 
+        setTimeout(function() {
+          window.location.href = link.href; 
+        }, 500); 
+      });
+    });
+      </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+</body>
+</html>

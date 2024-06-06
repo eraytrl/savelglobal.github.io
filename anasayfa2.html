@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="ğ1.jpeg.jpg">
+<title>Home Page</title>
+<style>
+    
+     /* Genel stil tanımlamaları */
+body {
+    margin: 0; /* Kenar boşluğu */
+    padding: 0; /* İç dolgu */
+    font-family: Arial, sans-serif; /* Yazı tipi */
+    background-color: black; /* Arka plan rengi */
+    color: #fff; /* Metin rengi */
+}
+
+/* Ana konteyner stil tanımlamaları */
+.container {
+    width: 60%; /* Genişlik */
+    margin: 0 auto; /* Kenar boşlukları */
+    padding: 20px; /* İç dolgu */
+    position: relative; /* Pozisyon */
+}
+
+/* Başlık stil tanımlamaları */
+header {
+    text-align: center; /* Metin hizalama */
+    padding: 20px 0; /* İç dolgu */
+    position: relative; /* Pozisyon */
+}
+
+/* Logo stil tanımlamaları */
+.logo {
+    text-align: center; /* Metin hizalama */
+    padding: 20px 0; /* İç dolgu */
+}
+
+/* Navigasyon stil tanımlamaları */
+nav {
+    float: left; /* Yana kaydırma */
+    width: 20%; /* Genişlik */
+    padding: 20px; /* İç dolgu */
+}
+
+/* Ana içerik stil tanımlamaları */
+main {
+    float: left; /* Yana kaydırma */
+    width: 80%; /* Genişlik */
+    padding: 20px; /* İç dolgu */
+}
+
+/* Altbilgi stil tanımlamaları */
+.footer {
+    clear: both; /* Temizleme */
+    text-align: center; /* Metin hizalama */
+    padding: 0px; /* İç dolgu */
+    width: 850px; /* Genişlik */
+}
+
+/* Resimlerin yerleştirildiği alanın stil tanımlamaları */
+.images {
+    display: flex; /* Flex konteynerı */
+    justify-content: space-between; /* Öğeleri eşit olarak dağıtır */
+}
+
+/* Resim kutularının stil tanımlamaları */
+.image {
+    background-color: #333; /* Arka plan rengi */
+    color: #fff; /* Metin rengi */
+    text-align: center; /* Metin hizalama */
+    padding: 20px; /* İç dolgu */
+    width: 30%; /* Genişlik */
+    margin: 10px; /* Kenar boşluğu */
+}
+
+/* Resimlerin stil tanımlamaları */
+.image img {
+    transition: transform 0.5s ease-in-out; /* Geçiş efekti */
+}
+
+/* Resimlerin üzerine gelindiğinde stil tanımlamaları */
+.image img:hover {
+    transform: scale(1.1); /* Büyütme efekti */
+}
+
+/* Logo alanı stil tanımlamaları */
+.logo-area {
+    background-color: #33333300; /* Arka plan rengi (şeffaf) */
+    color: #fff; /* Metin rengi */
+    position: absolute; /* Pozisyon */
+    top: 700px; /* Üst konum */
+    right: 20px; /* Sağ konum */
+    left: 340px; /* Sol konum */
+    width: 0px; /* Genişlik */
+}
+
+/* İçerik stil tanımlamaları */
+.içerik {
+    clear: both; /* Temizleme */
+    text-align: center; /* Metin hizalama */
+    padding: 125px 0; /* İç dolgu */
+    width: 795px; /* Genişlik */
+}
+
+/* Bağlantıların stil tanımlamaları */
+a:link {
+    text-decoration: none; /* Metin dekorasyonu (alt çizgi) */
+}
+
+a:visited {
+    color: rgb(255, 255, 255); /* Ziyaret edilen bağlantıların metin rengi */
+    text-decoration: none; /* Metin dekorasyonu (alt çizgi) */
+}
+
+a:hover {
+    color: rgb(255, 255, 255); /* Bağlantı üzerine gelindiğinde metin rengi */
+    text-decoration: none; /* Metin dekorasyonu (alt çizgi) */
+}
+
+a:active {
+    color: black; /* Bağlantı aktif olduğunda metin rengi */
+}
+
+/* .fade-out sınıfı stil tanımlamaları */
+.fade-out {
+    opacity: 0; /* Görünmezlik */
+    transition: opacity 0.5s ease-in-out; /* Geçiş efekti: opaklık */
+}
+
+/* .fade-out sınıfının gizli durumu */
+.fade-out.hidden {
+    display: none; /* Gizli olması */
+}
+
+</style>
+</head>
+<body>
+<div class="container">
+    <header>
+       <a href="savel2.html" class="button" ><h1>SavelGlobal.com</h1></a>
+    </header>
+    <main>
+        
+        <div class="images">
+            <div class="image">
+                <a href="sayyaristasyon2.html" class="button"><img src="z2.jpeg.jpg" width="200" height="200" alt="Image 1"></a>        
+                <p >Mobile Station</p>
+            </div>
+            <div class="image">
+                <a href="mobilco2.html" class="button"><img src="z1.jpeg.jpg" width="200" height="200" alt="Image 2"></a>
+                <p >Mobile Container Stations</p>
+                <div class="logo-area">
+                <img src="savel.png" alt="Logo" style=" width: 200px ;height:70px ">
+                </div>
+            </div>
+            <div class="image">
+                <a href="ürünler2.html" class="button"><img src="z3.jpeg.jpg" width="200" height="200" alt="Image 3"></a>
+                <p >Our Products</p>
+            </div>
+        </div>
+        <div class="içerik">
+        <p >QUALITY SERVICE, SINGLE ADDRESS</p>
+        </div>  
+    </main>
+    <div class="footer">
+        <p >All Rights Reserved. © 2024</p>
+    </div>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+  document.body.classList.remove('fade-out');
+});
+
+document.querySelectorAll('a.button').forEach(function(link) {
+  link.addEventListener('click', function(event) {
+    event.preventDefault(); 
+    document.body.classList.add('fade-out'); 
+    setTimeout(function() {
+      window.location.href = link.href; 
+    }, 500); 
+  });
+});
+  </script>
+</body>
+</html>

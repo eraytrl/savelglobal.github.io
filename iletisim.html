@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İletişim </title>
+    <style>
+        body{
+            background-color: rgb(0, 0, 0); /* Sayfa arka plan rengi */
+            font-family: Georgia, 'Times New Roman', Times, serif, sans-serif; /* Yazı fontu */
+            color: aliceblue; /* Yazı rengi */
+        }
+        .kutu1 {
+            width: 750px; /* Kutunun genişliği */
+            height: 450px; /* Kutunun yüksekliği */
+            background-color: #333; /* Kutu arka plan rengi */
+            border: 1px solid #333; /* Kutu kenarlık rengi ve kalınlığı */
+        }
+
+        .kutu2,
+        .kutu3 {
+            background-color: #333; /* Kutu arka plan rengi */
+            border: 1px solid #333; /* Kutu kenarlık rengi ve kalınlığı */
+            width: 750px; /* Kutunun genişliği */
+            height: 450px; /* Kutunun yüksekliği */
+            display: inline-block; /* Kutuların yan yana gelmesi için */
+            vertical-align: top; /* Kutuların üst hizalanması için */
+            margin-right: 10px; /* Sağ kenara olan boşluk miktarı */
+            align-items: center; /* Dikeyde ortalama */
+            text-align: center; /* Metinlerin ortalama */
+        }
+        form {
+            max-width: 400px; /* Formun maksimum genişliği */
+            margin: 0 auto; /* Formun merkezi hizalanması */
+        }
+        input[type="text"], textarea {
+            width: 100%; /* Giriş alanlarının genişliği */
+            padding: 10px; /* Giriş alanlarının iç boşluğu */
+            margin: 5px 0; /* Giriş alanlarının dış boşluğu */
+            box-sizing: border-box; /* Kutu modelini içeriğe göre ayarlama */
+        }
+        input[type="submit"] {
+            background-color: #4CAF50; /* Gönder düğmesinin arka plan rengi */
+            color: white; /* Gönder düğmesinin metin rengi */
+            padding: 10px 20px; /* Gönder düğmesinin iç boşluğu */
+            border: none; /* Gönder düğmesinin kenarlığı */
+            border-radius: 4px; /* Gönder düğmesinin köşe yuvarlama */
+            cursor: pointer; /* Gönder düğmesinin fare imleci stilini değiştirme */
+            float: right; /* Gönder düğmesinin sağa hizalanması */
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049; /* Fare imleci üstüne gelindiğinde gönder düğmesinin arka plan rengi */
+        }
+        .image-placeholder {
+            width: 50px; /* Resim alanının genişliği */
+            height: 50px; /* Resim alanının yüksekliği */
+            background-color: #ddd; /* Resim alanının arka plan rengi */
+            margin-right: 10px; /* Sağ kenara olan boşluk miktarı */
+        }
+
+        .description {
+            margin-bottom: 10px; /* Açıklamanın alt boşluğu */
+        }
+
+        .image-container {
+            display: flex; /* Resim container'ının flexbox olarak düzenlenmesi */
+            flex-direction: column; /* Sütun bazlı düzen */
+        }
+
+        .image-item {
+            display: flex; /* Resim öğesinin flexbox olarak düzenlenmesi */
+            align-items: center; /* Dikeyde hizalama */
+            margin-bottom: 10px; /* Alt boşluk miktarı */
+            margin-top: 20px; /* Üst boşluk miktarı */
+        }
+
+        .image-item img {
+            width: 50px; /* Resim genişliği */
+            height: 50px; /* Resim yüksekliği */
+            margin-right: 10px; /* Sağ kenara olan boşluk miktarı */
+            margin-left: 30px; /* Sol kenara olan boşluk miktarı */
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <a href="savel.html" class="button"><img src="savel.png"></a> <!-- Sayfa başlığına geri dönme butonu -->
+        <h1 style="color: aliceblue;">İletişim</h1> <!-- Sayfa başlığı -->
+
+        <!-- Google Maps iframe ile yer haritası -->
+        <div class="kutu">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1512.2750269701644!2d29.863729833092222!3d40.7059061593575!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cb41f02fd622dd%3A0x447240dbcee45596!2sSavel%20Elektronik%20Bili%C5%9Fim%20%C4%B0n%C5%9Faat%20Makina%20San.%20ve%20Tic.%20Ltd.%20%C5%9Eti.!5e0!3m2!1str!2str!4v1711389137379!5m2!1str!2str" 
+                width="1500" height="450" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+        <br>
+
+        <!-- İletişim bilgilerinin yer aldığı kutu -->
+        <div class="kutu2">
+            <div class="container">
+                <div class="image-container">
+                    <!-- İletişim bilgileri -->
+                    <div class="image-item">
+                        <img src="tel.jpg" alt="Resim 1">
+                        <h2>Telefon:</h2>
+                        <p>&numsp;0 (262) 658 00 70 </p>
+                    </div>
+                    <br>
+                    <div class="image-item">
+                        <img src="adres.jpg" alt="Resim 2">
+                        <h2>Adres:  </h2>
+                        <p>&numsp; Sepetlipınar Mah. D-130 Karayolu Cad. No:110 Başiskele / Kocaeli 41275 </p>
+                    </div>
+                    <br>
+                    <div class="image-item">
+                        <img src="mail2.jpg" alt="Resim 3">
+                        <h2>E-Mail: </h2>
+                        <p>&numsp;info@savel.com.tr </p>
+                    </div>
+                    <br>
+                    <div class="image-item">
+                        <img src="calısma.png" alt="Resim 4">
+                        <h2>Çalışma Saatleri: </h2>
+                        <p>&numsp;P.tesi-C.tesi: 09:00 - 18:00 </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- İletişim formunun yer aldığı kutu -->
+        <div class="kutu3">
+            <form action="/submit-form.php" method="POST">
+                <label for="fname">Ad Soyad</label>
+                <input type="text" id="fname" name="fullname" placeholder="Adınızı ve soyadınızı girin.." required>
+            
+                <label for="email">E-posta</label>
+                <input type="text" id="email" name="email" placeholder="E-posta adresinizi girin.." required>
+            
+                <label for="subject">Mesaj</label>
+                <textarea id="subject" name="subject" placeholder="Mesajınızı buraya yazın.." style="height:200px" required></textarea>
+            
+                <input type="submit" value="Gönder"> <!-- Formun gönderme butonu -->
+            </form>
+        </div>
+    </center>
+    <br>
+    <br>
+</body>
+</html>

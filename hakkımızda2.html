@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>    
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us</title>
+<link rel="icon" type="image/png" href="g1.jpeg">
+<style>
+/* Genel stil tanımlamaları */
+body {
+    background-color: #000; /* Arka plan rengi */
+    color: #fff; /* Metin rengi */
+    font-family: Arial, sans-serif; /* Yazı tipi */
+    padding: 20px; /* İç dolgu */
+    margin: 0; /* Kenar boşluğu */
+    position: relative; /* Pozisyon */
+}
+
+/* Ana konteyner stil tanımlamaları */
+.container {
+    max-width: 800px; /* Maksimum genişlik */
+    margin: 0 auto; /* Kenar boşluğu ile merkezleme */
+}
+
+/* Başlık stil tanımlamaları */
+h1 {
+    text-align: center; /* Metin hizalama */
+}
+
+/* Paragraf stil tanımlamaları */
+p {
+    text-align: justify; /* Metin hizalama */
+}
+
+/* Logo alanı stil tanımlamaları */
+.logo-area {
+    position: absolute; /* Pozisyon */
+    top: 95%; /* Üst konum */
+    right: 42%; /* Sağ konum */
+    width: 200px; /* Genişlik */
+    height: 70px; /* Yükseklik */
+}
+
+/* Sağdaki görüntü stil tanımlamaları */
+.right-image {
+    position: absolute; /* Pozisyon */
+    top: 50%; /* Üst konum */
+    right: 20px; /* Sağ konum */
+    transform: translateY(-40%); /* Dikey konumlandırma */
+    width: 250px; /* Genişlik */
+    height: 400px; /* Yükseklik */
+}
+
+/* Soldaki görüntü stil tanımlamaları */
+.left-image {
+    position: absolute; /* Pozisyon */
+    top: 50%; /* Üst konum */
+    left: 20px; /* Sol konum */
+    transform: translateY(-40%); /* Dikey konumlandırma */
+    width: 250px; /* Genişlik */
+    height: 400px; /* Yükseklik */
+}
+
+/* Görünmezlik efekti stil tanımlamaları */
+.fade-out {
+    opacity: 0; /* Opaklık */
+    transition: opacity 0.5s ease-in-out; /* Geçiş efekti */
+}
+
+/* Gizli durum stil tanımlamaları */
+.fade-out.hidden {
+    display: none; /* Görünmezlik */
+}
+
+</style>
+</head>
+<body>
+<div class="container">
+    <h1>About Us</h1>
+    <br>
+    <p>Savel sees itself in the Energy Equipment Manufacturer sector. Starting with Fuel pump electronics and Fuel automation services, our company, which started its activities, has come to these days with growth and development processes. We continue to bring excitement to the industry with confident and determined steps with the excitement of the first day. Today, Savel produces all equipment from Fuel pumps to mobile tank solutions within its own structure. Especially with mobile station solutions, besides bringing innovation to the industry, we have shown that alternative solutions are also available to everyone concerned.</p>
+   <hr>
+   <p>Savel Mobile Energy Stations continuously sets new goals for itself. Our path, which started with simple tank solutions, continues today with 40ft containers containing everything that should be in a fuel station. In our mobile solutions, where everything from A to Z is produced by ourselves, we also conceptually offer everything the customer expects from a fuel station with the latest technological equipment. Equipment and additions that are not expected in simple tank solutions such as Air conditioning, Generator, Automation cabin, Pump room are indispensable main elements in our solutions.</p>
+   <hr>
+   <p>Customer satisfaction is as important an element for us as quality for other brand value-bearing companies. User satisfaction is an indispensable Savel principle not only for today's work but also for tomorrow. Especially our foreign customers show continuity with us due to the high quality we offer and more reasonable prices. We exhibit beyond the alternative for some companies, especially to our customers. This allows our customers to make more profit with our products besides quality. Indeed, if there were not countless examples of this in real life, we could not be at these points on the road we started with zero capital today.</p>
+</div>
+<div class="logo-area">
+    <a href="savel2.html" class="button"><img src="savel.png" alt="Logo" style="width: 200px; height: 70px;"></a>
+</div>
+<img class="right-image" src="i1.jpeg.jpg">
+<img class="left-image" src="ü1.jpeg.jpg">
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+  document.body.classList.remove('fade-out');
+});
+
+document.querySelectorAll('a.button').forEach(function(link) {
+  link.addEventListener('click', function(event) {
+    event.preventDefault();
+    document.body.classList.add('fade-out'); 
+    setTimeout(function() {
+      window.location.href = link.href; 
+    }, 500); 
+  });
+});
+  </script>
+</body>
+</html>
